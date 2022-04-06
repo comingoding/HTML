@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내가 가고싶은 여행지</title>
+    <style>
+        *{margin-left:5px; padding: 0; }
+        .trip {width: 1100px;  overflow: hidden; }
+    
+        #tab01,#tab02,#tab03,#tab04,#tab05 {display: none; }
+
+        #tab01:checked ~ .sheet .sheet01 {display: block; }
+        #tab02:checked ~ .sheet .sheet02 {display: block; }
+        #tab03:checked ~ .sheet .sheet03 {display: block; }
+        #tab04:checked ~ .sheet .sheet04 {display: block; }
+        #tab05:checked ~ .sheet .sheet05 {display: block; }
+
+        #tab01:checked ~ .label .lab01 {background-color: rgba(51, 51, 51, 0.89); color: white; }
+        #tab02:checked ~ .label .lab02 {background-color: rgba(51, 51, 51, 0.89); color: white; }
+        #tab03:checked ~ .label .lab03  {background-color: rgba(51, 51, 51, 0.89); color: white; }
+        #tab04:checked ~ .label .lab04 {background-color: rgba(51, 51, 51, 0.89); color: white; }
+        #tab05:checked ~ .label .lab05 {background-color: rgba(51, 51, 51, 0.89); color: white; }
+
+        .trip .label { float: left;}
+       .trip .label::after{content: "";display: block; clear: both;}
+        .label label { display: block; width: 100px; height:100px; background-color: rgb(22, 22, 22); color: white; text-align: center; line-height: 100px; }
+    
+        .sheet div{ width:1000px; height: 500px; font-size: 50px; text-align: center; display:none;}
+        
+
+        .sheet01 {background-image: url(.IMG/베네치아.jpg);}
+        .sheet02 {background-image: url(/IMG/아이슬란드00.jpg);}
+        .sheet03 {background-image: url(/IMG/프라하.jpg);}
+        .sheet04 {background-image: url(/IMG/푸에르토리코.jpg);}
+        .sheet05 {background-image: url(/IMG/제주도.jpg);}
+    </style>
+</head>
+<body>
+    <div class="trip">
+        <br>  <h1>내가 여행가고 싶은 곳</h1> <br>
+    <input type="radio" id="tab01" name="radio" checked >
+    <input type="radio" id="tab02" name="radio">
+    <input type="radio" id="tab03" name="radio">
+    <input type="radio" id="tab04" name="radio">
+    <input type="radio" id="tab05" name="radio">
+
+    <div class="label">
+        <label for="tab01" class="lab01">베네치아</label>
+        <label for="tab02" class="lab02">아이슬란드</label>
+        <label for="tab03" class="lab03">프라하</label>
+        <label for="tab04" class="lab04">푸에르토리코</label>
+        <label for="tab05" class="lab05">제주도</label>
+    </div>
+
+    <div class="sheet">
+        <div class="sheet01"></div>
+        <div class="sheet02"></div>
+        <div class="sheet03"></div>
+        <div class="sheet04"></div>
+        <div class="sheet05"></div>
+    </div>
+</div>
+</body>
+</html>

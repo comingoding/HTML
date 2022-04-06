@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>popup</title>
+    <style>
+        * {
+            margin:0;
+            padding:0;
+        }
+        body {overflow: hidden;}
+        /* body {
+            width:1000px;
+            position: relative;
+            margin:0 auto;
+        } */
+
+        #popup {
+            display: none;
+        }
+        #popup:checked ~ .popupBox {display: block;}
+            /* ~? 나하고 같은 레벨의 아래쪽 태그 중 .popupBox를 찾아 display  하라 */
+
+        #popup ~ .popupBox {display: none;}
+
+        .popupBox {
+            width:300px;
+            height: 350px;
+            border: 1px solid black;
+            padding:20px;
+            position:absolute;
+            top:300px;
+            left:300px;
+        }
+
+        #wingBanner {
+            display: none;
+        }
+        #wingBanner:checked ~ .wingBox {right:0px;}
+        #wingBanner ~ .wingBox {right:-200px;}
+
+        #wingBanner:checked ~ .wingBox .closeBtn {display: block;}
+        #wingBanner:checked ~ .wingBox .openBtn {display: none;}
+
+        #wingBanner ~ .wingBox .openBtn {display: block;}
+        #wingBanner ~ .wingBox .closeBtn {display: none;}
+
+        .wingBox {
+            position:absolute;
+            top:200px;
+            right:-200px;
+            transition: all 0.3s 0.1s; 
+            /* 0.3s만에 켜지지만 0.1s 딜레이가 있음  강조할때 사용*/
+        }
+
+        .wingBox label {
+            float: left;
+        }
+        .wingBox .wing {
+            float: left;
+            width:200px;
+            height: 500px;
+            border: 1px solid black;
+            box-sizing: border-box;
+            background-color: #ccc;
+            /* transition: width, 0.3s; */
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <input type="checkbox" id="popup" checked>
+    <!-- checked?? 처음부터 보이게 -->
+    <div class="popupBox">
+        <div class="popupImg">
+            <img src="/HTML/IMG/제목 없음.jpg" alt="팝업이미지(로딩중)">
+        </div>
+        <label for="popup" class="popupLabel">닫기</label>
+    </div>
+
+    <input type="checkbox" id="wingBanner">
+
+    <aside class="wingBox">
+        <label for="wingBanner" class="closeBtn">닫기</label>
+        <label for="wingBanner" class="openBtn">열기</label>
+        <div class="wing">wing_banner</div>
+    </aside>
+
+
+
+
+</body>
+</html>

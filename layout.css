@@ -1,0 +1,70 @@
+* { margin:0 auto; outline: 1px solid #333;}
+div  {background-color: silver;  
+    box-sizing: border-box;}
+
+header {margin-bottom: 10px; outline: none;}
+.container {width: 1200px; background-color: silver;  position: relative; height: 200px; outline: none;}
+.container .gnb {width:300px; margin: 0 auto; float: right;outline: none; }
+.container .gnb::after {content: ""; display: block; clear: both;}
+.container p {width:150px; height:150px; position: absolute; top:50%; left: 50%; transform: translate(-50%,-50%); background-color: #999; }
+ .lnb {width: 1200px; background-color: #999; text-align: center;outline: none;}
+.visual_main {text-align: center; margin-bottom: 10px; height: 200px; position: relative; outline: none;}
+.visual_main .visualDiv { width:1200px;   height:200px; background-color:#999; font-size: 50px; outline: none; text-align:center;  }
+.visual_main .visualDiv p {outline: none;position: absolute; top:50%; left: 50%; transform: translate(-50%,-50%); }
+  /*header*/
+
+.event {background-color:#999; outline: 1px solid #333; overflow: hidden; height: 600px; width: 1200px; margin-bottom: 10px;}
+.event .event01 {width:585px; height: 600px;  float: left;margin:0 10px;}
+.event .right {width:585px; height: auto; float:right; margin-right:10px;}
+.event .right .event02 {height:295px; margin-bottom: 10px;}
+.event .right .event03 {height:295px;}
+.event .right::after{content: ""; clear:both; display: block !important; }
+
+.allProducts {width: 1200px; height: 600px;overflow: hidden; } 
+.products {float: left; height:590px; width: 590px; background-color: green;}
+.products::after {clear: both; content: ""; display: block;}
+.products .upper {height: 300px; overflow: hidden; margin-bottom: 10px;}
+.products .upper .product01{ background:yellow;float: left; width: 290px; height: inherit; overflow: hidden; margin-right: 10px;}
+.products .upper .product01::after{clear: both; content: ""; display: block;}
+.products .upper .product02{ background:yellow;float: left; width: 290px;  height: inherit; overflow: hidden;}
+.products .downer {height: 300px; overflow: hidden;}
+.products .downer .product03{background:yellow;float: left; width: 290px;  height: inherit; overflow: hidden; margin-right: 10px;}
+.products .downer .product03::after{clear: both; content: ""; display: block;}
+.products .downer .product04{background:yellow;float: left; width: 290px;  height: inherit; overflow: hidden;}
+.product05 {width: 600px; height: 600px; overflow: hidden;}
+.container02{width: 1200px; overflow: hidden; margin-bottom: 10px; height:510px;}
+
+.allBests{width:1020px; float: right;overflow: hidden; margin-right: 0 auto;}
+.allBests::after {content: ""; display: block; clear: both; outline: none;}
+.firstBest{float: left; width:245px; height: 510px;margin-right:10px;}
+.firstBest .best01 {height: 250px; margin-bottom: 10px; }
+.firstBest .best05 {height:250px;}
+.secondBest {float: left; width:245px; height:510px;margin-right:10px;}
+.secondBest .best02  {height: 250px; margin-bottom: 10px; }
+.secondBest .best06 {height: 250px;}
+.thirdBest{float: left; width:245px; height:510px;margin-right:10px;}
+.thirdBest .best03  {height: 250px; margin-bottom: 10px; }
+.thirdBest  .best07  {height: 250px;}
+.fourthBest{float: left; width:245px; height: 510px; }
+.fourthBest .best04{height: 250px; margin-bottom: 10px;}
+.fourthBest .best08{height: 250px;}
+.allInners {width: 1200px; height:500px; margin-bottom:10px;}
+.allInners .firstInner {float: left; width:20%; overflow: hidden; height: 500px;} 
+.allInners .firstInner .inner01 {height:250px;}
+.allInners .firstInner .inner06 {height:250px;}
+.allInners .secondInner {float: left; width:20%; overflow: hidden;height: 500px;} 
+.allInners  .secondInner .inner02 {height:250px;}
+.allInners .secondInner .inner07 {height:250px;}
+.allInners .thirdInner {float: left; width:20%; overflow: hidden; height: 500px;} 
+.allInners .thirdInner .inner03 {height:250px;}
+.allInners .thirdInner .inner08{height:250px;}
+.allInners .fourthInner {float: left; width:20%; overflow: hidden; height: 500px;} 
+.allInners .fourthInner .inner04{height:250px;}
+.allInners .fourthInner .inner09 {height:250px;}
+.allInners .fifthInner {float: left; width:20%; overflow: hidden; height: 500px;} 
+.allInners .fifthInner .inner05 {height:250px;}
+.allInners .fifthInner .inner10 {height:250px;}
+/*main*/
+footer {width: 1200px; height: 170px;}
+footer .logo {width: 150px; height: 150px; margin: 10px; float: left;}
+footer .copyright {width:1020px; height:150px; margin-right:10px; float: right; margin-top:10px ;}

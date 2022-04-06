@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0; list-style: none; }
+        a{text-decoration: none; color: black;}
+        .lnb{}
+        .lnb li {width: 200px; height: 50px; float: left ;}
+        .lnb li a {display: block; background-color: black; color: #fff; line-height: 50px; text-align: center;}
+        /* a는 inline태그, 디자인은 a가 다 가져감! Q)display:block 이랑 inline-block 차이??*/
+        .lnb >ul>li {}
+        /* .lnb li li{display: none; transition: all 0.3s;} */
+        .lnb ul ul{ transition: all 0.3s; height: 0; overflow: hidden;}
+        /* display는 속성 아니고 성격! -> 트렌지션 사용할수 없음->opacity 사용=밑에 존재해버림=높이0에서 스르륵 나타나게 2단으로 걸어야함, 
+        .lnb>ul ul{overflow:hidden} 필요*/ 
+
+         .lnb ul:hover ul {display:block; height: 300px; } /* 하나씩일 경우 */
+        /* .lnb ul:hover li li { display: block; opacity: 1;}  */
+        /* .lnb li {width: 200px; height: 30px; background-color: #333; color: #fff; float: left; text-align: center; line-height: 30px;  transition: all 0.3s;}
+        /*위)기본메뉴 Q) line-height의 의미?? */
+        .lnb li:hover { background-color: #ccc; color: black;} 
+
+
+    </style>
+</head>
+<body>
+    <nav class="lnb">
+        <ul>
+            <li><a href="#">menu01</a>
+            <ul>
+                <li><a href="#">menu01-01</a></li>
+                <li><a href="#">menu01-02</a></li>
+                <li><a href="#">menu01-03</a></li>
+                <li><a href="#">menu01-04</a></li>
+            </ul>
+        </li>
+
+            
+        <li><a href="#">menu02</a>
+            <ul>
+                <li><a href="#">menu02-01</a></li>
+                <li><a href="#">menu02-02</a></li>
+                <li><a href="#">menu02-03</a></li>
+                <li><a href="#">menu02-04</a></li>
+            </ul>
+        </li>
+        <li><a href="#">menu03</a>
+            <ul>
+                <li><a href="#">menu03-01</a></li>
+                <li><a href="#">menu03-02</a></li>
+                <li><a href="#">menu03-03</a></li>
+                <li><a href="#">menu03-04</a></li>
+            </ul>
+        </li> <li><a href="#">menu04</a>
+            <ul>
+                <li><a href="#">menu04-01</a></li>
+                <li><a href="#">menu04-02</a></li>
+                <li><a href="#">menu04-03</a></li>
+                <li><a href="#">menu04-04</a></li>
+            </ul>
+        </li> <li><a href="#">menu05</a>
+            <ul>
+                <li><a href="#">menu05-01</a></li>
+                <li><a href="#">menu05-02</a></li>
+                <li><a href="#">menu05-03</a></li>
+                <li><a href="#">menu05-04</a></li>
+            </ul>
+        </li>
+        </ul>
+    </nav>
+</body>
+</html>

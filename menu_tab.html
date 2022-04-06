@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menuTab</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        #tab01,#tab02,#tab03 {display: none; }
+
+        #tab01:checked ~ .sheet .sheet01 {display: block; }
+        /* #tab01:checked ~ .sheet .sheet02 {display: none; }
+        #tab01:checked ~ .sheet .sheet03 {display: none; } */
+
+        /* #tab02:checked ~ .sheet .sheet01 {display: none; } */
+        #tab02:checked ~ .sheet .sheet02 {display: block; }
+        /* #tab02:checked ~ .sheet .sheet03 {display: none; } */
+
+        /* #tab03:checked ~ .sheet .sheet01 {display: none; }
+        #tab03:checked ~ .sheet .sheet02 {display: none; } */
+        #tab03:checked ~ .sheet .sheet03 {display: block; }
+
+        #tab01:checked ~ .label .lab01 {background-color: yellow; color: black; }
+        #tab02:checked ~ .label .lab02 {background-color: yellow; color: black; }
+        #tab03:checked ~ .label .lab03 {background-color: yellow; color: black; }
+        /* radio에서는 체크안됐을때 기본 속성을 따르므로 체크 안됐을때를 따로 정의할 필요 없음! */
+
+        .label{overflow: hidden;}
+        .label label { display: block; width: 100px; height: 50px; background-color: black; color: white; text-align: center; line-height: 50px; float: left;  border-radius: 10px 10px 0 0}
+      /* label은 inline-block (height width 안먹으므로 display:block 설정 해야함)  */
+        .sheet div{width: 500px; height: 300px; background-color: yellow; font-size: 50px; line-height: 300px;text-align: center; display:none;}
+
+
+    </style>
+</head>
+<body>
+    <!-- <section>섹션은 같은 속성을 가져야 함 ex)product, event, </section> -->
+    <input type="radio" id="tab01" name="radio" checked >
+     <!--checked를 적어야 선택된 상태임!--> 
+    <!-- 유일한거 적을때 name Q)radio? !!name을 같게 적어야함-기능 연동!! checkbox같이 토글기능이 없음!  -->
+    <input type="radio" id="tab02" name="radio">
+    <input type="radio" id="tab03" name="radio">
+    <div class="label">
+        <!-- label은 항상 id와 일치시키기!!!! -->
+        <label for="tab01" class="lab01">공지사항</label>
+        <label for="tab02" class="lab02">Q&A</label>
+        <label for="tab03" class="lab03">오시는길</label>
+
+    </div>
+
+    <div class="sheet">
+        <div class="sheet01">sheet01</div>
+        <div class="sheet02">sheet02</div>
+        <div class="sheet03">sheet03</div>
+    </div>
+</body>
+</html>

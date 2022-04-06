@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout_02</title>
+    <style>
+        *{margin: 0 auto; padding: 0;}
+        .outerHeader {width: 1200px; height:250px;background-color: #ccc; overflow: hidden; margin-bottom: 10px;  position: relative;}
+        .innerHeader{overflow: hidden; }
+        .gnb {width: 300px; background-color: #999; float: right;}
+        .logo {width: 150px; height: 150px;background-color: #999; position: absolute; top:50%; left: 50%; transform: translate(-50% ,-50%); margin: 10px 0; }
+        .logo::after {content: ""; display: block; clear: both;}
+        .lnb {background-color: #999;  text-align: center; }
+        .visual_main {width: inherit; height: 300px; background-color: #ccc; position: relative; margin-bottom: 10px;}
+        .visual_main p { width:1200px; height: 300px; background-color: #999; font-size: 50px; text-align: center; position: absolute; top:50%; left: 50%; transform: translate(-50%,-50%); line-height: 300px;}
+
+        .eventNproduct{background-color: #ccc; width: 1200px;}
+
+        .event {width: 1180px;  margin: 0 auto; height:600px; margin-bottom: 10px; background-color: #999;  border: 1px solid black; overflow: hidden;}
+        .event .event01 {width:585px; height: 600px; border: 1px solid black; float: left;}
+        .event .eventRight {width:585px; height: 600px; border: 1px solid black; float: right;}
+        .event .eventRight .event02 {width:585px; height:295px; border: 1px solid black; margin-bottom: 10px;}
+        .event .eventRight .event03 {width:585px; height:295px; border: 1px solid black;}
+
+       
+        .product {width: 1180px;  margin: 0 auto; height:600px; margin-bottom: 10px; background-color: #999;  border: 1px solid black; overflow: hidden;}
+
+        .product .productRight {width:585px; height: 600px; border: 1px solid black; float: left;}
+        .product .productRight .productRightUpper {width: 585px; height:295px; background-color: green;}
+        .product .productRight .productRightUpper .product01 {width: 287.5px; height: 295px; box-sizing: border-box; float: left; background-color: yellow;}
+        .product .productRight .productRightUpper .product02 {width: 287.5px; height: 295px; ;box-sizing: border-box; float:right; background-color: yellow;}
+        .product .productRight .productRightDowner {width: 585px; height:295px;}
+        .product .product05 {width:585px; height: 600px; border: 1px solid black; float: right;}
+    </style>
+</head>
+<div class="outerHeader">
+    <header class="innerHeader">
+        <nav class="gnb">gnb</nav>
+        <div class="logo">logo</div>
+        <nav class="lnb">lnb</div>
+    </header> </div> <!--header-->
+
+    <div class="visual_main"> <p>visual_main</p></div> <!--visual_main-->
+     
+    <div class="eventNproduct">
+    <div class="event">
+        <div class="event01">event01</div>
+        <div class="eventRight">       
+        <div class="event02">event02</div>
+        <div class="event03">event03</div></div></div>  <!--event-->
+
+     <div class="product">
+         <div class="productRight">
+             <div class="productRightUpper">
+             <div class="product01">product01</div>
+             <div class="product02">product02</div> </div>
+             <div class="productRightDowner">
+             <div class="product03">product03</div>
+             <div class="product04">product04</div></div>
+         </div>
+         <div class="product05">product05</div>
+     </div>
+
+
+</div>
+
+
+
+<body>
+
+
+
+    
+</body>
+</html>

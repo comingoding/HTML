@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        section {margin: 50px 0 ;}
+        div {background-color: yellow; width: 300px; height: 200px;}
+        span {background-color: yellow;width: 300px; height: 200px; display: inline-block;}  
+        /* float으로 나타나는 문제를 해결하기 위한 display:inline-block but 자간이 생김->레이아웃을짤때는 절대 쓰지 않음
+        a를 쓸때는 inline-block할필요 X / 쓸때는 해야함 
+
+        자간은 부모태그에다가 font-size:0; + 자신에다 font-size:16px; 해야함! gnb같은거 할때*/
+        .label  { width:350px; font-size:0;}
+        .label label {width: 100px; height: 50px; border: 1px solid black;  box-sizing: border-box;  display: inline-block; text-align: center; line-height: 50px;font-size:16px;}
+        /* label은 inline 태그임 */ 
+
+        a {text-decoration: none; color: black;}
+        .gnb {width: 500px;}
+        .gnb li {float: left; padding: 20px;}
+
+        /* a를 쓰는 경우 <li><a></a></li>
+         li는 레이아웃만 잡아주고 실질 기능은 a에 주면 됨
+        단, a를 다 보이게 하기 위해 패딩을 적용 a도 인라인 태그이므로 a를 display:block이라고 쓸 수 있음
+        현장에서 잘 쓰지 않긴 함  */
+
+
+    </style>
+</head>
+<body>
+    <section>
+        <div>box01</div>
+        <div>box02</div>
+        <div>box03</div>
+        <!-- display속성을 가진 div -->
+    </section>
+
+    <section>
+        <span>span01</span>
+        <span>span02</span>
+        <span>span03</span>
+        <!-- inline태그는 하나의 글자로 취급함, 둘사이 간격은 자간이므로 간격이 벌어짐 따라서 width와 height를 적용할 수 없음-->
+    </section>
+    
+    <div class="label">
+        <label class="lab01">label01</label>
+        <label class="lab01">label02</label>
+        <label class="lab01">label03</label>
+    </div>
+    <div class="gnb">
+        <ul>
+           <ul>
+               <li><a href="#">login</a></li>
+               <li><a href="#">join</a></li>
+               <li><a href="#">site_map</a></li>
+               <li><a href="#">search</a></li>
+        </ul>
+        </ul>
+       <!-- 1. inline-block은 주로 gnb lnb에서 글자수가 다를때 씀 
+       2. 탭이나 a가 사용되지 않은 경우에는 쉽게 사용될 수 있음
+       3. inline-block은 글자속성이므로 자간을 가짐
+       4. a를 사용한 이유?? 글자수가 달라서 씀 이런 경우 li의 사이즈를 잡지 않고 패딩을 넣어준다 (균등하게 사이여백 들어간 것 처럼 보임) -->
+
+
+     </div>
+</body>
+</html>
