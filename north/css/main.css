@@ -1,0 +1,150 @@
+*{margin: 0; padding: 0;}
+img {display: block;} 
+/* img는 inline이라 (글자처럼 자간이 생기는 )오류가 생김->display:block처리  */
+a {text-decoration: none; color: black;}
+ul {list-style: none;}
+
+/* --------------------------header------------------------ */
+header {width: 100%; height: auto; }
+.navBox {width:1060px; overflow: hidden; margin: 0 auto;} 
+.navBox ul { float: right;}
+.navBox li {display: inline-block; font-size: 11px; border-right: 1px solid black; padding: 0 8px; line-height: 11px;}
+.navBox li:nth-child(4) {border-right: none;}
+.innerHeader {width: 100%; background-color: rgb(196, 196, 196); margin: 0 auto;overflow: hidden; }
+.innerHeader .menu {width: 1060px;margin: 0 auto; overflow: hidden; }
+.innerHeader .menu  ul {height: 16px; overflow: hidden; float: right; padding: 20px 0;}
+.innerHeader .menu  ul li {display: block; font-size: 16px;  padding: 0 8px; line-height: 16px; float: left; }
+.innerHeader .menu  .searchBox {position: relative;}
+.innerHeader .menu  .searchBox .search input {width: 250px; }
+.innerHeader .menu  .searchBox .search i {position: absolute; transform: translate(-200%, -70%)}
+.innerHeader .gnb {background-color: rgb(22, 22, 22); color: #fff; }
+.innerHeader .gnb ul {text-align: center; overflow: hidden;  font-size: 12px;}
+.innerHeader .gnb ul li {display: inline-block; margin: 10px 30px;}
+
+/* --------------------------wrap------------------------ */
+.wrap {width: 100%; height: auto; background: url(../img/bg_img.jpg) repeat-x;}
+.div1060 {width: 1060px; margin: 0 auto;}
+.div1060 h2 {margin: 10px 0;}
+/* ../하는 이유? css에서 한번 나와서 img 로 들어가야함 
+background img 가로로 반복? reapeat-x/ 
+color 쓰는 복합명령어 background : color, img, repeat (주로 사용)
+position 쓰는 복합명령어 background :  img, repeat, position
+   background-attachment: fixed; (스크롤 내려도 계속 나옴) background-position: center; background-size: cover; 는 단일로 쓴다!참고!
+*/
+/* --------------------------visual.main------------------------ */
+#tab01,#tab02,#tab03,#tab04,#tab05 {display: none;}
+/* tab0$? 동글동글한 radio 버튼 */
+
+#tab01:checked ~.sheet .sheet01 {display: block;}
+#tab02:checked ~.sheet .sheet02 {display: block;}
+#tab03:checked ~.sheet .sheet03 {display: block;}
+#tab04:checked ~.sheet .sheet04 {display: block;}
+#tab05:checked ~.sheet .sheet05 {display: block;}
+
+.visualMain {width: 1060px; height: 530px; margin: 0 auto;}
+
+.visualMain .sheet div{width: 1060px; height: 480px; display: none;}
+
+.visualMain .labelMain {width: 1060px; overflow: hidden;}
+/* height가 같으면 부모에서 생략가능 */
+.visualMain .labelMain label{width:20%; height: 50px; display: block; float: left; text-align: center; line-height: 50px;}
+/* inline-block쓰면 배경 색 안먹어서 안됨!! + 칸 사이에 또 자간 생김 */
+
+#tab01:checked ~ .labelMain .labMain01 {background-color: red; color: #fff;}
+#tab02:checked ~ .labelMain .labMain02 {background-color: red; color: #fff;}
+#tab03:checked ~ .labelMain .labMain03 {background-color: red; color: #fff;}
+#tab04:checked ~ .labelMain .labMain04{background-color: red; color: #fff;}
+#tab05:checked ~ .labelMain .labMain05 {background-color: red; color: #fff;}
+
+/* -------------------------container----------------------- */
+/* ---------------------------ISSUE-------------------- */
+.container {width: 1250px; height:1630px; margin: 0 auto;}
+
+.container .issueItem {width: 1250px; height: 1160px; }
+.container .issueItem .issueLeft {width: 95px; height: 1160px; float: left; }
+.container .issueItem .issueLeft {width: 95px; height: 1160px; float: left;}
+.container .issueItem .issueMiddle {width: 1060px; height: 1160px;float: left;}
+
+.container .issueMiddle .itmA {width: 1060px; height:580px; float: left;}
+.container .issueMiddle .AL {width: 530px; height:580px;float: left;} 
+.container .issueMiddle .AR {width: 530px; height:580px; float: left;}
+.container .issueMiddle .AR .ART {width: 530px; height:29 0px; }
+.container .issueMiddle .AR .ART .ART01 {float: left;}
+.container .issueMiddle .AR .ART .ART02 {float: left;}
+.container .issueMiddle .AR .ARB{width: 530px; height:290px; }
+.container .issueMiddle .AR .ARB .ARB01{float: left;}
+.container .issueMiddle .AR .ARB .ARB02 {float: left;}
+
+.container .issueMiddle .itmB {width: 1060px; height:580px; float: left;}
+.container .issueMiddle .BL {width: 530px; height:580px; float: left;}
+.container .issueMiddle .BL .BLT {width: 530px; height:290px; }
+.container .issueMiddle .BL .BLT .BLT01 {float: left;}
+.container .issueMiddle .BL .BLT .BLT02 {float: left;}
+.container .issueMiddle .BL .BLB{width: 530px; height:290px; }
+.container .issueMiddle .BL .BLB .BLB01{float: left;}
+.container .issueMiddle .BL .BLB .BLB02 {float: left;}
+.container .issueMiddle .BR {width: 530px; height:580px;float: left;} 
+
+/* --------------------------activity-------------------- */
+.activity {width: 1250px; height: 383px;}
+.activity .activityImg {overflow: hidden;}
+.activity .activityImg .activityLeft {float: left;}
+.activity .activityImg .activityMiddle {float: left;}
+.activity .activityImg .activityRight {float: left;}
+/* --------------------------new Arrival----------------------- */
+.newArrival {width: 1060px; height:auto ; margin: 0 auto; margin-bottom: 20px;}
+#arrivalTab01, #arrivalTab02{display: none;}
+#arrivalTab01:checked~ .arrivalSheet .arrivalSheet01 {display: block;}
+#arrivalTab01:checked~ .arrivalLabel .arrivalLab02 {display: block;}
+#arrivalTab01:checked~ .arrivalLabel .arrivalLab01 {display: none;}
+#arrivalTab02:checked~ .arrivalSheet .arrivalSheet02 {display: block;}
+.arrivalLabel {margin-right: 0;}
+.arrivalLabel label {display: block; width: 100px; height: 50px; text-align: center; line-height: 50px; float: left}
+
+.arrivalSheet {margin: 0 auto;}
+.arrivalSheet .arrivalSheet01 {width: 1060px; height: 550px;  overflow: hidden;}
+.arrivalSheet .arrivalSheet01 .first {width: 1060px; height: 275px; overflow: hidden;}
+.arrivalSheet .arrivalSheet01 .first >div {float: left;}
+.arrivalSheet .arrivalSheet01 .second {width: 1060px; height: 275px; overflow: hidden;}
+.arrivalSheet .arrivalSheet01 .second >div {float: left;}
+.arrivalSheet .arrivalSheet02 {width: 1060px; height: 275px; overflow: hidden; display: none;}
+.arrivalSheet .arrivalSheet02 >div {float: left;}
+/* --------------------------btnTop------------------------ */
+.btnTop {width: 30px; height: 30px; background-color: red; color: #fff; text-align: center; line-height: 30px; font-weight: bold; font-size: 11px; position: fixed; bottom: 50px; right: 50px;}
+/* -------------------------FOOTER----------------------- */
+.outerFooter {width: 100%; background-color: black; color: #fff; margin: 0 auto;}
+.footerTop {width: 1060px; margin: 0 auto; overflow: hidden;font-size: small; font-weight: lighter;}
+.footerTop>div {margin: 20px 40px;float: left; }
+.footerTop>div ul {color: rgb(104, 104, 104); margin: 0 auto;}
+.footerTop>div h3 {color: #fff;}
+
+.footerTop >div ul li {padding: 3px;}
+.footerTop05 {overflow: hidden;color: rgb(104, 104, 104);}
+.footerTop05>div {margin-bottom: 20px;}
+.fTM {width: 1400px; margin: 0 auto; display: block;}
+
+.footerMiddle {width:  1060px; margin:20px auto; overflow: hidden;font-size: small; font-weight: lighter; text-align: ceneter;}
+
+.footerMiddle a{background-color: #666; color: #999; border-radius: 50%; }
+.middleMiddle {width: 500px; overflow: hidden; margin: 0 auto;}
+.footerMiddleA {float: left; margin: 0 auto;}
+.footerMiddleA div {background-color: red; color: #fff; border-radius: 5%; text-align: center; margin: 10px auto;}
+ .footerMiddleB {float:right ; margin: 0 auto;}
+ .footerMiddleB .sns{ margin-top: 15px; text-align: center;}
+ .footerMiddleB .sns a{font-size: 7px; padding: 5px;}
+
+ .fMB {width: 1350px; margin: 0 auto; display: block;}
+ 
+ .footerBottom {width: 1060px; margin: 0 auto; font-size: 7px; color: #999; padding-top: 15px; overflow: hidden;}
+ .footerBottom a{color: #fff !important; padding-left: 5px;}
+
+ .footerBottomL {float: left; }
+
+ .footerInfo{margin: 0 auto;}
+ .footerBottomL .footerInfo ul div {display: inline-block; border-right: 1px solid; padding-right: 3px; }
+.copyright {margin-top: 25px;}
+.copyright div {float: left; width: 40px; height: 40px; overflow: hidden; margin-right: 15px;}
+
+.footerBottomR {float: right;}
+.footerBottomR a{color: #fff; }
+

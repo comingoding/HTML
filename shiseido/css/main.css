@@ -1,0 +1,73 @@
+*{margin: 0; padding: 0;}
+ul {list-style: none;}
+/* -----------------------------header----------------------------- */
+header {width: 100%; height: 150px;  box-sizing: border-box;}
+.gnb {width: 100%; background-color: black;color: rgb(192, 192, 192);  font-size: 12px; font-weight: lighter; padding: 8px 0;}
+.gnb .login { width: 1000px; overflow: hidden; margin: 0 auto;}
+.gnb .login ul { float: right; overflow: hidden;}
+.gnb ul li {margin:0 15px ;float: left;}
+.headerLogo {width: 1000px; margin: 0 auto;}
+.headerLogo .logoImg {width: 300px; margin: 0 auto;}
+ .lnb {width: 1000px; margin: 0 auto; font-weight: bold; overflow: hidden;}
+.lnb>div {float: left;}
+.lnb .brand {margin: 0 10px; border-right: 1px solid black;  border-left: 1px solid black; margin: left; padding-left: 3px;padding-right: 3px;}
+.lnb li {display: inline-block; margin: 0 7px;}
+.lnb .search {width: 187px; position: relative;}
+.lnb .search i {position: absolute; top: 30%; right:15%; font-weight: bold; font-size: small;}
+
+/* -------------------------------visualMain------------------------------ */
+.visualMain{width: 1000px; height: 500px; margin: 0 auto;}
+/* 전부 wrap으로 묶어도 되지만(일일이 margin 0 auto 하기 귀찮아스) 900대도 있어서 nope! */
+.visualMain img {width:1000px; height: auto;display: block; margin: 0 auto; margin-bottom: 20px;}
+/* 이미지랑 박스사이즈가 다를땐? 항상 W:100% H:auto 반응형의 기본!!
+    글자랑 이미지는 width를 따로 갖지 않기때문에 display block걸어주면 width 100%된다!?*/
+.rollingBanner {width: 100%; max-width : 1320px; min-width: 1024px; margin: 30px auto;}
+/* 롤링배너가 메인비쥬얼보다 작았으면 할때? max. max는 100%일때 사용~!! ->margin 0 auto 사용 가능
+    마구마구 커지기 싫으면? min 사용 !*/
+.rollingBanner img { width: 100%; height: auto; }
+.titleBox {width: 1000px; height: 60px; overflow: hidden; margin: 0 auto;}
+.titleBox h3 {width: 300px; height: 60px; text-align: center; line-height: 60px; float: left;}
+.titleBox .bar{width: 350px; height: 60px; float: left;}
+.titleBox .bar img {width: 100%; height: auto; display: block;}
+/* ------------------Campaign & Event----------------- */
+.event {width: 920px; /*height: 220px;*/ overflow: hidden; margin: 0 auto;  margin-bottom: 30px;}
+/* 1.자식이 높이를 가지면 부모의 높이 생략 가능, 자식이 float시 but 부모 높이 생략시 항상 overflow hidden 쓰기
+2. oeverflow hidden이 없어도 부모 높이가 정해져 있으면 잇초케! */
+.event .eve { width: 300px; height: 220px; float: left;}
+/* eve의 div 가 height를 갖고 있으므로 생략 가능! 블록 속성을 가진 자식들은 말 안해도 width 100%임 */
+.event .eve div {width: 100%; height: 160px;}
+.event>div:nth-child(2) {margin: 0 10px;}
+.event .eve div img {width: 100%; height: auto; }
+/*이미지 태그와 박스태그는 다름!!! 박스사이즈와 이미지 사이즈가 다를땐 항상 width100%를 써줘야함 
+height auto는 날아가는 개념, 100%는 비율 맞춰 들어가는 개념!
+*/
+.event .eve p {/*width: 100%;*/ height: 60px; line-height: 60px;  font-weight: bold;}
+/* p는 블럭태그이므로 width생략 가능 */
+/* ------------------Best Seller----------------- */
+.bestSeller {width: 1000px; overflow: hidden; margin: 0 auto; border-bottom: 1px solid #999;}
+.bestSeller .product {float: left; width:200px;  height: 300px;  text-align: center; font-weight: lighter;} 
+.bestSeller .product button {width: 150px;}
+/* -----------------sns----------------- */
+.sns {width: 1000px; margin: 30px auto; height:270px;} 
+.sns .snsTop {width: 920px; height:160px; overflow: hidden; margin: 0 auto; margin-bottom: 10px; }
+.sns .snsTop .snsImg {float: left;}
+.sns .snsTop .snsImg02 {margin:0 10px;}
+.sns .snsBottom {width: 920px; height:100px; overflow: hidden; margin: 0 auto;  }
+.sns .snsBottom .snsImg {float: left;}
+.sns .snsBottom .snsImg05 {margin:0 10px;}
+/* ----------------footer---------------- */
+footer {width: 100%; background-color: black; color: rgb(192, 192, 192);  font-size: 12px; font-weight: lighter;}
+.footerTop {width: 1000px;  overflow: hidden; margin: 0 auto; padding: 8px 0;}
+.footerTop .footerTopLeft{float: left; overflow: hidden;}
+.footerTop .footerTopLeft li{float: left;  border-right: 1px solid  rgb(192, 192, 192);  margin-right: 15px; padding-right:15px ; line-height: 12px;}
+.footerTop .footerTopLeft li:nth-child(4) {border-right: none;}
+.footerTop .footerTopRight{float:right; overflow: hidden;}
+.footerTop .footerTopRight li{float: left;line-height: 12px; }
+.footerTop .footerTopRight li:first-child{border-right: 1px solid  rgb(192, 192, 192);margin-right: 15px; padding-right:15px ; }
+
+.footerBottom {background-color: rgb(136, 0, 0); }
+.footerBottom .footerBottomWrap {width: 1000px; margin: 0 auto; overflow: hidden; padding: 2px 0;}
+.footerBottom .footerBottomWrap .facebook {float: left; }
+.footerBottom .footerBottomWrap a{text-decoration: none; color: rgb(192, 192, 192);}
+
+.footerBottom .footerBottomWrap .copyRight {float: right;}

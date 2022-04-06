@@ -1,0 +1,108 @@
+*{margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none; color: black;}
+img {display: block;} 
+
+@import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+
+/* width가 100% 로 꽉 차는 것 글자(inling)가 아니라 블럭취급하므로 삐져나오는 오류를 없앨 수 있음!!!!!!!!!!!!!!! ing:inline -> block */
+/* ---------header--------- */
+.outerHeader {width: 100%;}
+.innerHeader {width: 1030px; margin: 0 auto;}
+.innerHeader .navBox {width: 100%; overflow: hidden;}
+.innerHeader .navBox .brand { float: left;}
+.innerHeader .navBox .gnb {float: right;}
+.innerHeader .navBox .gnb ul{font-size: 0;}
+.innerHeader .navBox .gnb li {display: inline-block; font-size: 11px; border-right: 1px solid black; padding: 0 8px; line-height: 11px;}
+/* 작은 폰트는 11~12px 본문 폰트는 16px -serif
+작은 폰트는 9~10px 본문 폰트는 13~14px -san serif, 굴림 (심플한 페이지)) */
+.innerHeader .navBox .gnb li:last-child {border: none;}
+.innerHeader .logoBox {width: 100%;margin: 20px 0; position: relative;}
+.innerHeader .logoBox .logo {width: 200px; height: 70px; margin: 0 auto;} 
+
+.innerHeader .logoBox .searchBox {position: absolute; top: 30px; right:0px; }
+.innerHeader .logoBox .searchBox  .searchForm  input{ border: none; background: transparent; }
+.innerHeader .logoBox .searchBox  .searchForm button{outline:none;border: none; background: transparent; height: 40px; width: 40px;}
+.innerHeader .logoBox .searchBox  .searchForm button i{font-size: 15px;color: #fff;background: #333;padding: 10px; border-radius: 50%;
+}
+.lnbBox {width: 100%; height:30px; background-color: #1d2d51;} 
+.lnbBox .lnb {width: 1030px; margin: 0 auto;}
+.lnbBox .lnb li {display: inline-block; color: #fff; line-height: 30px; padding: 0 25px;}
+
+
+/* -------------aside------------- */
+aside {position: fixed; top: 335px; right: 0% ; font-size: 14px;  height: 700px;}
+aside .close {background-color: #1d2d51; color: #fff;width: 16px; height: 40px; display:block}
+aside ul {background-color: rgb(202, 202, 202);}
+aside ul li:nth-child(5) {background-color: #1d2d51; text-align: center; }
+aside ul li:nth-child(5) a {color: rgb(202, 202, 202);}
+
+
+
+
+
+/* -------------wrap--------------- */
+
+.wrap {width: 1030px; margin: 0 auto;}
+/* ----------visualMain-------------- */
+.visualMain{width: 100%; overflow: hidden; margin: 15px 0;}
+.visualMain .visualLeft{width: 700px; height: 530px; float: left; margin-right: 15px;}
+/* .visualMain .visualright img{width: 100%; height: auto;}*/
+    /* height: 100% */ 
+/* 반응형에 MUST!!!!!들가야함!!! */
+.visualMain .visualRight {width: 315px; height: 530px; float: left;}
+.visualMain .visualRight .visualRightTop {margin-bottom: 15px;}
+
+/* ----------visualMainBanner-------------- */
+.titleBox {width: 100%; overflow: hidden; display: block;}
+.titleBox .bar {width: 400px; height: 50px; float: left; padding-top:25px; box-sizing: border-box;}
+.titleBox .title {width: 230px; height: 50px; float: left;  text-align: center; line-height: 50px;}
+ .choice345 {width: 1030px; height: 720px; box-sizing: border-box; overflow: hidden;}
+ .choice345 .choice img {box-sizing: border-box; width: 100%; height:480px;  border: 1px solid rgb(197, 197, 197);}
+.eventBanner img{width: 1300; margin-top:50px ;margin-bottom:30px;} 
+
+.newArrival {width: 1030px; height:700px;}
+
+#tab01, #tab02 {display: none;}
+
+.sheet01, .sheet02 {display: none;}
+
+#tab01:checked ~.sheet .sheet01 {display: block;}
+#tab02:checked ~.sheet .sheet02 {display: block;}
+
+.sheet {width: 1030px; margin: 0 auto; height: 700px; position: absolute; margin-bottom: 20px;}
+
+.sheet .sheet01{width: 100%; overflow: hidden; padding-bottom: 30px;}
+.sheet .sheet01 .imgLeft {width: 505px; box-sizing: border-box; margin-right: 20px;  height: 670px; float: left; overflow: hidden;}
+.sheet .sheet01 .imgLeft .imgLeftTop {width: 100%; height: 430px;margin-bottom: 20px; }
+.sheet .sheet01 .imgLeft .imgLeftBottom {width: 100%; height: 220px; overflow: hidden; }
+.sheet .sheet01 .imgLeft .imgLeftBottom .imgLeftBottom01{width: 245px; height: 220px;float: left; overflow: hidden;}
+.sheet .sheet01 .imgLeft .imgLeftBottom .imgLeftBottom02{width: 245px; height: 220px;float: left; margin-left: 15px;}
+.sheet .sheet01 .imgRight {width: 505px; box-sizing: border-box;  height: 670px; float: left;}
+.sheet .sheet01 .imgRight .imgRightTop {width: 100%; height: 220px; overflow: hidden; margin-bottom: 20px;}
+.sheet .sheet01 .imgRight .imgRightTop   .imgRightTop01{width: 245px; height: 220px;float: left; }
+.sheet .sheet01 .imgRight .imgRightTop  .imgRightTop02{width: 245px; height: 220px;float: left; margin-left: 15px;}
+.sheet .sheet01 .imgRight .imgRightBottom {width: 100%; height: 430px; }
+.sheet .sheet02 {text-align: center; line-height: 670px; font-size: 50px;}
+
+.multiShop {width: 100%; height: 450px; overflow: hidden;}
+.multiShop .itm01 {width: 340px; height: 400px; float: left; margin-right: 20px; box-sizing: border-box;}
+.multiShop .itm01 .itm01_1 {width: 340px; height: auto; margin-bottom: 20px; box-sizing: border-box;}
+.multiShop .itm02 {width: 310px; height: 400px; float: left; }
+.multiShop .itm03 {width: 340px; height: 400px; float: left; margin-left: 20px; box-sizing: border-box;}
+.multiShop .itm03 .itm03_1 {width: 340px; height: auto; margin-bottom: 20px; box-sizing: border-box;}
+
+.brandCodi {overflow: hidden; margin-bottom: 30px; margin-top: 20px;}
+.brandCodi .codi01{width:505px; height: 170px; float: left; margin-right: 15px;}
+.brandCodi .codi02 {width:505px; height: 170px; float: left;}
+
+.footerMenu {width: 1030px; height: inherit; border-top: 1px solid #333; border-bottom: 1px solid #333; margin: 0 auto; padding: 5px; overflow: hidden; text-align: center; font-size: 9px;}
+.footerMenu  .ul01{overflow: hidden; float: left;}
+.footerMenu  .ul01 li {margin: 10px; float: left; font-size: 13px;}
+ .footerMenu .ul02 {float: right; width: 300px;}
+ .footerMenu .ul02 i {margin: 10px; font-size: 16px; color: #333; }
+
+
+ .footerMenu .innerfooter{font-size: 8px; position: relative;}
+ .footerMenu .familySites {position: absolute; top: 50%; right: 100%;}
