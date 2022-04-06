@@ -1,0 +1,81 @@
+*{border: none; box-sizing: border-box;}
+
+li {list-style: none;}
+
+
+
+
+/* ------------------------------------------------- */
+header { margin: 0 auto; width: 100%;}
+.headerTop { text-align: center; background-color: #f2f2f2; width: 100%}
+.text {background-color: rgba(0,0,100,0); color:rgba(250, 250, 250, 0);}
+/* -----------------------headerTop-------------------------- */
+.headerBottom {margin: 0 auto; width: 1060px; overflow: hidden; padding: 20px 90px; }
+.headerBottom .headerBottomA {float: left;}
+.headerBottom .headerBottomA li{padding: 0 18px; font-weight: bold;  float: left;}
+.headerBottom .headerBottomB {float: right;}
+.headerBottom .headerBottomB li{ padding: 0 10px;
+    font-weight: lighter; font-size: 9px;  float: left;}
+/* -----------------------headerBottom-------------- */
+.visualMain {width:1800px; margin: 0 auto; }
+/* ---------------------VisualMain-------------- */
+.container {width: 100%;}
+.contents {width: 100%; background-color: #f2f2f2;}
+.imgs {width: 990px; margin: 0 auto; height:auto ; padding: 20px 0; font-size: 15px; margin-bottom: 20px;}
+.imgs img {width: 240px; height: 240px; }
+
+
+.imgs .top {width: 990px; height:490px; margin-bottom: 10px;}
+.imgs .top .topA{float: left; margin-right: 10px;}
+.imgs .top .topA .topA1{margin-bottom: 10px;}
+.imgs .top .topB{float: left; margin-right: 10px;}
+.imgs .top .topB img {width: 240px; height: 490px;}
+.imgs .top .topC{float: left;}
+
+.imgs .top .topC .cTop {margin-bottom: 10px; width: 490px; height: 240px;}
+.imgs .top .topC .cTop1 {float: left; margin-right:10px ;}
+.imgs .top .topC .cTop2 { float: left;}
+.imgs .top .topC .cBottom img {width: 490px; height: 240px;}
+
+.imgs .bottom {width: 990px; height: 240px;}
+.imgs .bottom .bottomA {float: left; margin-right: 10px;}
+.imgs .bottom .bottomB {float: left;margin-right: 10px;}
+.imgs .bottom .bottomB img {width: 480px; height: 240px;}
+.imgs .bottom .bottomC {float: left;}
+/* -------------------contents--------------- */
+
+.left {position: relative; overflow: hidden}
+.leftBox {position: absolute; width: 240px; height: 240px; left: -100px; background-color: rgba(0, 0, 250, 0);color: rgba(250, 250, 250, 0); text-align: center; }
+.left:hover .leftBox  {width: 240px; height: 240px;  left: 0;  background-color: rgba(0, 0, 250, 0.7);color: rgba(250, 250, 250, 1);  transition: left 0.2s, color 0.2s 0.3s;}
+.left a:hover .leftBox {width: 240px; height: 240px;  left: 0;  background-color: rgba(0, 0, 250, 0.7);color: rgba(250, 250, 250, 1);  transition: left 0.2s, color 0.2s 0.3s;}
+.leftBox02 {position: absolute; width: 240px; height: 490px; left: -100px; background-color: rgba(0, 0, 250, 0);color: rgba(250, 250, 250, 0); text-align: center; }
+.left:hover .leftBox02  {width: 240px; height: 490px;  left: 0;  background-color: rgba(0, 0, 250, 0.7);color: rgba(250, 250, 250, 1);  transition: left 0.2s, color 0.2s 0.3s;}
+
+.up {position: relative; overflow: hidden}
+.upBox {position: absolute; width: 490px; height: 240px; top: -100px; background-color: rgba(0, 0, 250, 0);color: rgba(250, 250, 250, 0); text-align: center; }
+.up:hover .upBox  {width:490px; height: 240px; top: 0; background-color: rgba(0, 0, 250, 0.7);color: rgba(250, 250, 250, 1);  transition: top 0.2s, color 0.2s 0.3s;}
+
+/* --------------------transition---------------- */
+.sns {width:1060px; margin: 0 auto; height: 200px; margin: 0 auto;}
+.sns h2 {font-weight: lighter;}
+.sns>div{float: left; width: 33.3333%; overflow: hidden;}
+.sns img {width: 120px; height: 120px; border-radius: 50%;}
+.sns .snsImg {float: left; margin-right: 30px;}
+.sns .snsText {float: left;}
+/* --------------------sns---------------- */
+footer hr {width: 100%; height: 1px; border: 1px solid #999;}
+footer {width: 100%; background-color: #333; color: #999; text-align: center; }
+
+.footerTop {width: 990px; height: 230px; overflow: hidden; margin: 0 auto;}
+.footerTop .footerMenu {width: 20%; float: left; overflow: hidden; text-align: center; }
+.ul {float: left; width: 50%;}
+
+.footerMiddle {width:100%; border-top: 1px solid #999; border-bottom: 1px solid #999;   height:auto; overflow: hidden;}
+.footerMiddle .customer {width: 990px; margin: 0 auto; text-align: center;}
+.footerMiddle ul {overflow: hidden; margin: 0 auto; float: left;}  
+.footerMiddle  li {float: left; border-right: 1px solid #f2f2f2;  padding: 5px; margin: 3px auto; line-height:9px ; padding-right: 8px;padding-left: 8px; font-size: 15px;}
+.footerMiddle  li:last-child {border-right: none;}
+.footerMiddle  a {color: #fff; text-decoration: none; border:1px solid #999; float: left; padding: 5px; box-sizing: border-box;}
+
+.footerBottom {width: 990px; height: 100px; text-align: center; margin: 0 auto; margin-top: 30px;}
+/* -------------------footer---------------- */
